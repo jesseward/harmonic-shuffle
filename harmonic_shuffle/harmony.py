@@ -70,8 +70,6 @@ class Harmony(object):
         :rtype list:
         """
 
-        down = []
-
         # handle a roll over at position "1" on the wheel. in the case of 1 or 101 we down
         # shift to 12 or 112
         if self.root_key_value == 1:
@@ -102,8 +100,8 @@ class Harmony(object):
 
     def minor(self):
         """ Fetches an adjacent key on the wheel (maj -> min or min -> maj).
-        :return: A string
-        :return:
+        :return: A list representing a group of compatible keys
+        :rtype list:
         """
 
         # shift from major to minor
